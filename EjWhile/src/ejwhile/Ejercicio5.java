@@ -7,14 +7,38 @@ public class Ejercicio5 {
 	public static void main(String[] args) {
 
 		int num;
+		int contador = 1;
+		int numposit = 0;
+		int numnegt = 0;
+		int contnegt = 0;
+		int contcero = 0;
+		double solnumneg = 0;
+		
 		Scanner sc = new Scanner(System.in);
-		
-		System.out.println("Escribe diez num, pueden ser positvos o negativos y tambien puedes incluir el 0");
-		num = sc.nextInt();
-		
-		while (num >0) {
+
+		while (contador <= 10) {
+			System.out.println("Escriba un número");
+			num = sc.nextInt();
 			
+			if (num > 0) {
+				numposit += num;
+				
+			} else if (num < 0) {
+				numnegt += num;
+				contnegt++; 
+				solnumneg = (double)numnegt/contnegt;
+				
+				
+			} else {
+				contcero++;
+			}
+			contador++;
+ 				
 		}
+		System.out.println("La suma de los números positivos es: " + numposit);
+        System.out.println("La media de los números negativos es: " + solnumneg);
+        System.out.println("El número de ceros introducidos es: " + contcero);
+		sc.close();
 	}
 
 }

@@ -16,16 +16,17 @@ public class Ejercicio4 {
 		while (numero != 0) {
 			
 			if (numero%2 ==  0) {
-				System.out.println("!Es PAR¡");
+				System.out.println("¡Es PAR!");
+				
 			} else {
-				System.out.println("!Es IMPAR¡");
+				System.out.println("¡Es IMPAR!");
 			}
 			
 			System.out.println("Escribe un número -->");
 			numero = sc.nextInt();
-			System.out.println("!FIN¡");
+			
 		}
-		
+		System.out.println("¡FIN!");
 		sc.close();
 	}
 
